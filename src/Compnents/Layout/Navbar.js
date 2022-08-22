@@ -1,4 +1,4 @@
-import Cart from './Cart'
+import CartButton from './CartButton'
 import classes from './Navbar.module.css'
 function Navbar(props){
     return(
@@ -9,7 +9,7 @@ function Navbar(props){
             <li className={classes.link}>Store</li>
             <li className={classes.link}>About</li>
         </ul>
-        <Cart className={classes.list} />
+        <CartButton className={classes.list} onClick={props.onClick}/>
         </div>
         <div className={classes.banner}>    
         <h1>Project-E</h1>

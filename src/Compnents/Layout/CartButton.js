@@ -1,7 +1,7 @@
 function Cart(props){
     return(
         <div>
-        <button>Cart</button>
+        <button onClick={props.onClick}>Cart</button>
         <label>0</label>
         </div>
     )

@@ -5,7 +5,7 @@ import classes from './Navbar.module.css'
 function Header(props){
     return(
         <header>
-            <Navbar />
+            <Navbar onClick={props.onClick}/>
         </header>
     )
 }
