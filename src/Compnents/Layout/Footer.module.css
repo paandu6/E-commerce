@@ -1,0 +1,17 @@
+.footer{
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer h1{
+    color: white;
+    font-size: 40px;
+}
+.icons{
+    margin: 19px;
+    height:20px;
+    color: white;
+    align-items: flex-end;
+}

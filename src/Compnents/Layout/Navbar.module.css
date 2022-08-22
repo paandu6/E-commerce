@@ -1,0 +1,43 @@
+.nav{
+    height: 50px;
+    background: black;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+}
+.nav  button{
+    width: 50px;
+    margin-left: 900px;
+    border-style: solid;
+    background-color: inherit;
+    border-color: aqua;
+    color: white;
+    font-size: 15px;
+
+}
+.nav label{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.list{
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    justify-content:space-around;
+    text-decoration-style: none;
+    list-style-type: none;
+}
+.link{
+    color: aliceblue;
+    padding: 15px;
+    font-size: 15px;
+    text-decoration-style:solid;
+}
+.banner{
+    height: 250px;
+    background-color: #e3dfda;
+    font-size: 40px;
+    overflow: auto;
+    text-align: center;
+}
