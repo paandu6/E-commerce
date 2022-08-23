@@ -4,19 +4,23 @@ import Products from './Compnents/Products/Products';
 import Footer from './Compnents/Layout/Footer';
 import Cart from './Compnents/Cart/Cart'
 import { useState } from 'react';
+import CartContextProvider from './Storage/CartContextProvider';
 
 function App() {
   const [cartshow,setcartshow]=useState(false)
   function showcartHandler(){
     setcartshow(true)
   }
+  function hidecartHandler(){
+    setcartshow(false)
+  }
   return (
-    <div>
+    <CartContextProvider>
       <Header onClick={showcartHandler} />
-      {cartshow && <Cart />}
+      {cartshow && <Cart onClick={hidecartHandler}/>}
       <Products />
       <Footer />
-    </div>
+    </CartContextProvider>
   );
 }
 

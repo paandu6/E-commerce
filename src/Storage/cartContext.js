@@ -1,12 +1,12 @@
-import React from "react"
+import React, { useReducer } from "react"
 
 const CartContext=React.createContext(()=>{
-    showcart(){
-        
-    }
     return(
         {
-            showcart:()=>{}
+            items:[],
+            totalAmount:0,
+            AddToCart:(items)=>{},
+            RemoveFromCart:(id)=>{}
         }
     )
 })

@@ -11,8 +11,8 @@ return (
         </div>
     </div>
     <div>
-        <button >Add</button>
-        <button >Remove</button>
+        <button onClick={props.AddItem}>Add</button>
+        <button onClick={props.RemoveItem}>Remove</button>
     </div>
     </li>
 );

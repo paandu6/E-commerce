@@ -1,6 +1,6 @@
-function Button(){
+function Button(props){
     return(
-        <button>Add</button>
+        <button onClick={props.onClick}>Add</button>
     )
 }
 export default Button
