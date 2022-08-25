@@ -37,13 +37,19 @@ function removetocartHandler(id){
             <CartItem name={items.title} price={items.price} AddItem={AddToCartHandler.bind(null,items)}
             RemoveItem={removetocartHandler.bind(null,items.id)}/>
         ))}
+        
     </ul>)
+    const numberofitems=ctx.items.reduce((cur,item)=>{
+        return cur+item.amount
+    },0)
     return(
         <Modal onClick={props.onClick}>
             {console.log(ctx)}
             {cartitems}
             <span>total amount</span>
             <span>{ctx.totalAmount}</span>
+            <span>Total Quantity</span>
+            <span>{numberofitems}</span>
             <button onClick={props.onClick}>Cancel</button>
             <button>Order</button>
         </Modal>

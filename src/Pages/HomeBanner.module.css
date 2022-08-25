@@ -1,0 +1,23 @@
+.banner{
+    height: 300px;
+    background-color: #e1e1e1;
+    overflow: auto;
+    position: relative;
+}
+.banner h1{
+    text-align: center;
+    font-size: 35px;
+}
+.bannerbutton{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    margin-left: 37%;
+}
+.bannerbutton button{
+    width: 400px;
+    height: 100px;
+    background: black;
+    color: white;
+    font-size: 35px;
+}

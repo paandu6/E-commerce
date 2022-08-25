@@ -1,19 +1,18 @@
 import CartButton from './CartButton'
 import classes from './Navbar.module.css'
+import { NavLink } from 'react-router-dom'
 function Navbar(props){
     return(
         <div>
         <div className={classes.nav}> 
         <ul className={classes.list}>
-            <li className={classes.link}>Home</li>
-            <li className={classes.link}>Store</li>
-            <li className={classes.link}>About</li>
+            <NavLink activeClassName={classes.active} to='/home' className={classes.link}>Home</NavLink>
+            <NavLink activeClassName={classes.active} to='products' className={classes.link}>Store</NavLink>
+            <NavLink activeClassName={classes.active} to='about' className={classes.link}>About</NavLink>
         </ul>
         <CartButton className={classes.list} onClick={props.onClick}/>
         </div>
-        <div className={classes.banner}>    
-        <h1>Project-E</h1>
-        </div>
+        
         </div>
         
     )

@@ -1,7 +1,9 @@
+import classes from './Navbar.module.css'
+
 function Banner(){
     return(
-        <div>
-            <h1>Project-E</h1>
+        <div className={classes.banner}>    
+        <h1>Project-E</h1>
         </div>
     )
 }
