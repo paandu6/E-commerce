@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import Banner from '../Compnents/Layout/Banner'
 import Footer from '../Compnents/Layout/Footer'
 import Navbar from '../Compnents/Layout/Navbar'
 import CartContextProvider from '../Storage/CartContextProvider'
@@ -26,7 +27,7 @@ function ContactUs(){
         <CartContextProvider>
             <div>
             <Navbar />
-
+            <Banner />
             </div>
         <div className={classes.formdiv}>
             <form onSubmit={formSubmitHandler}>
