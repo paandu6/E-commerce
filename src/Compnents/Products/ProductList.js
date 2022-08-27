@@ -1,5 +1,6 @@
 import { useContext, useRef } from "react"
 import CartContext from "../../Storage/cartContext"
+import classes from './Products.module.css'
 
 function ProductList(props){ 
     const amountinputref=useRef()
@@ -20,11 +21,16 @@ function ProductList(props){
     }
     return(
         <form onSubmit={submitHandler}>
+            <div className={classes.labeltitle}>
             <label>{props.title}</label>    
-            <label>{props.price}</label>
             <input type='number' step={1} defaultValue={1} ref={amountinputref}/>
+            </div>
             <img src={props.img} />
-        <button>Add</button>
+            <div className={classes.labeltitle}>
+            <label>{props.price}</label>
+            <button>ADD</button>
+            </div>
+            
         </form>
     )
 }

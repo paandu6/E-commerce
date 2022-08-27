@@ -1,8 +1,4 @@
-.section{
-    width: 800px;
-    background-color: black;
-    margin: auto;
-}
+
 .section h1{
     color: white;
     text-align: center;
@@ -22,4 +18,25 @@
     margin: 20px;
     align-items: center;
     color: white;
+}
+.labeltitle{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+}
+.labeltitle input{
+    width: 40px;
+    height: 20px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+}
+.labeltitle button{
+    width: 100px;
+    height: 30px;
+    background-color: #10e1ba;
+    font-weight: bold;
+    font-size: 16px;
 }

@@ -1,5 +1,6 @@
 import classes from './Products.module.css'
 import ProductList from './ProductList'
+import Card from '../UI/Card'
 const productsArr = [
     {
     id:1,
@@ -33,14 +34,14 @@ function Products(){
         </li>
     ))
     return(
-        <section className={classes.section}>
+        <Card className={classes.section}>
             <div>
                 <h1>Products</h1>
             </div>
         <ul className={classes.list}>
             {items}
         </ul>
-        </section>
+        </Card>
     )
 }
 export default Products

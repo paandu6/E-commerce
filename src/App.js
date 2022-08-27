@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import ProductsPage from './Pages/Productspage';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import ContactUs from './Pages/ContactUs';
 function App() {
   
   return (
@@ -16,6 +17,9 @@ function App() {
       </Route>
       <Route path="/about">
       <About />
+      </Route>
+      <Route path="/contactus">
+      <ContactUs />
       </Route>
     </Fragment>
   );

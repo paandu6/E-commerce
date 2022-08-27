@@ -1,12 +1,17 @@
 import Header from "../Compnents/Layout/Header"
 import CartContextProvider from "../Storage/CartContextProvider"
+import classes from './About.module.css'
+import Card from "../Compnents/UI/Card"
+
 
 import img from '../Assets/band.png'
+import Footer from "../Compnents/Layout/Footer"
 function About(){
     return(
         <CartContextProvider>
             <Header />
-            <div >
+            <Card>
+            <div className={classes.about}>
                 <h1>About Us</h1>
                 <img src={img} alt="rock band image" />
                 <p>Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of sorrows, hates no prosecutors
@@ -23,6 +28,8 @@ function About(){
                 answered, which was selected for the fault, it is often one of us, however, have any! Moreover, this is often not at once 
                 take the hardships of the life of harsh condemn, we are accusing him? Him whom something large cisterns.</p>
             </div>
+            </Card>
+            <Footer />
         </CartContextProvider>
     )
 }
