@@ -1,0 +1,16 @@
+.details img{
+    float: left;
+    height: 300px;
+    width: 300px;
+    margin: 40px;
+}
+.details {
+    overflow: auto;
+}
+.price {
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+    padding-top: 20px;
+}

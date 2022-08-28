@@ -1,6 +1,7 @@
 import classes from './Products.module.css'
 import ProductList from './ProductList'
 import Card from '../UI/Card'
+import { Link } from 'react-router-dom'
 const productsArr = [
     {
     id:1,
@@ -29,8 +30,9 @@ const productsArr = [
 
 function Products(){
     const items=productsArr.map((items)=>(
-        <li className={classes.item}>
+        <li className={classes.item}><Link to={`/products/${items.id}`}>
         <ProductList title={items.title} price={items.price} img={items.imageUrl} id={items.id} />
+        </Link>
         </li>
     ))
     return(

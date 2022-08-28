@@ -7,6 +7,7 @@ function ProductList(props){
 
     const ctx=useContext(CartContext)
 
+
     function submitHandler(event){
         event.preventDefault()
         const enteredamount=amountinputref.current.value
