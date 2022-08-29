@@ -10,6 +10,9 @@ function Navbar(props){
             <NavLink activeClassName={classes.active} to='products' className={classes.link}>Store</NavLink>
             <NavLink activeClassName={classes.active} to='about' className={classes.link}>About</NavLink>
             <NavLink activeClassName={classes.active} to='contactus' className={classes.link}>Contact Us</NavLink>
+            <NavLink activeClassName={classes.active} to='login' className={classes.link}>Login</NavLink>
+
+
             
         </ul>
         <CartButton className={classes.list} onClick={props.onClick}/>

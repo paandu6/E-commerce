@@ -1,5 +1,12 @@
 import { useReducer } from 'react'
 import CartContext from './cartContext'
+import wt1 from '../Assets/wt1.jpg'
+import wt2 from '../Assets/wt2.jpg'
+import hd1 from '../Assets/hd1.jpg'
+import sh1 from '../Assets/sh1.jpg'
+import s1 from '../Assets/shirt1.jpg'
+
+
 const defaultValue={
     items:[],
     totalAmount:0
@@ -7,27 +14,27 @@ const defaultValue={
 const productsArr = [
     {
     id:1,
-    title: 'Colors',
+    title: 'Watches',
     price: 100,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
+    imageUrl: wt1,
     },
     {
     id:2,
-    title: 'Black and white Colors',
+    title: 'HeadPhones',
     price: 50,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
+    imageUrl: hd1,
     },
     {
     id:3,
-    title: 'Yellow and Black Colors',
+    title: 'Shoes',
     price: 70,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%203.png',
+    imageUrl: sh1,
     },
     {
     id:4,
-    title: 'Blue Color',
+    title: 'Shirts',
     price: 100,
-    imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',}
+    imageUrl: s1,}
 ]
 
 function cartreducer(state,action){

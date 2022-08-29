@@ -1,4 +1,5 @@
 import { useContext, useRef } from "react"
+import { Link } from "react-router-dom"
 import CartContext from "../../Storage/cartContext"
 import classes from './Products.module.css'
 
@@ -6,7 +7,6 @@ function ProductList(props){
     const amountinputref=useRef()
 
     const ctx=useContext(CartContext)
-
 
     function submitHandler(event){
         event.preventDefault()
@@ -26,7 +26,9 @@ function ProductList(props){
             <label>{props.title}</label>    
             <input type='number' step={1} defaultValue={1} ref={amountinputref}/>
             </div>
-            <img src={props.img} />
+            <Link to={`/products/${props.id}`}>
+            <img src={props.img} className={classes.img}/>
+            </Link>
             <div className={classes.labeltitle}>
             <label>{props.price}</label>
             <button>ADD</button>
