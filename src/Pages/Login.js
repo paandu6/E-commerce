@@ -12,7 +12,6 @@ function Login(){
         const enteredemail=emailinputref.current.value
         const eneteredpassword=passwordinputref.current.value
         
-        
             fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDzSMKJ3LdN2ARk80zJafuU0T_aYyqU9Fk',{
             method:'POST',
             body:JSON.stringify({

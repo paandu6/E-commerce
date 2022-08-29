@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch,Redirect} from 'react-router-dom'
 import ProductsPage from './Pages/Productspage';
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -8,10 +8,12 @@ import ProductDetails from './Pages/ProductDetails';
 import CartContextProvider from './Storage/CartContextProvider';
 import Login from './Pages/Login'
 import { AuthContextProvider } from './Storage/authContext';
+import AuthContext from './Storage/authContext';
+import { useContext } from 'react';
 function App() {
-  
+  let authctx = useContext(AuthContext)
+  console.log(authctx.isLoggedin)
   return (
-    <AuthContextProvider>
     <CartContextProvider>
       <Switch>
       <Route path="/home">
@@ -23,18 +25,20 @@ function App() {
       <Route path="/contactus">
       <ContactUs />
       </Route>
-      <Route path="/products" exact>
+      {authctx.isLoggedin && <Route path="/products" exact>
       <ProductsPage />
-      </Route>
+      </Route>}
       <Route path="/products/:productId">
       <ProductDetails />
       </Route>
-      <Route path="/login">
+      {! authctx.isLoggedin && <Route path="/login">
       <Login />
+      </Route>}
+      <Route path='*'>
+        <Redirect to='/home'></Redirect>
       </Route>
       </Switch>
     </CartContextProvider>
-    </AuthContextProvider>
   );
 }
 
