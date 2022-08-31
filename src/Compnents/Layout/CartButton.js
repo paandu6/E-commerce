@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import CartContext from "../../Storage/cartContext"
-function Cart(props){
+function CartButton(props){
     const ctx =useContext(CartContext)
 
     const numberofitems=ctx.items.reduce((cur,item)=>{
@@ -13,4 +13,4 @@ function Cart(props){
         </div>
     )
 }
-export default Cart
+export default CartButton

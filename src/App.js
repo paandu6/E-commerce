@@ -7,12 +7,10 @@ import ContactUs from './Pages/ContactUs';
 import ProductDetails from './Pages/ProductDetails';
 import CartContextProvider from './Storage/CartContextProvider';
 import Login from './Pages/Login'
-import { AuthContextProvider } from './Storage/authContext';
 import AuthContext from './Storage/authContext';
 import { useContext } from 'react';
 function App() {
   let authctx = useContext(AuthContext)
-  console.log(authctx.isLoggedin)
   return (
     <CartContextProvider>
       <Switch>
